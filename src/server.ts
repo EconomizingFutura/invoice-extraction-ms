@@ -4,7 +4,7 @@ dotenv.config()
 import express from "express"
 import cors from "cors"
 
-import invoiceRoutes from "./routes/invoice.routes"
+import invoiceRoutes from "./routes/invoice.routes.js"
 
 const app = express()
 
