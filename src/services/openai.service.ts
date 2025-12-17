@@ -1,7 +1,6 @@
 import fs from "fs"
 import { safeJsonParse } from "../utils/json.util.js"
 import { getParsedOutput } from "../utils/openai.util.js"
-import type { InvoiceData } from "../types/invoice.types.js"
 import OpenAI from "openai"
 import type { RawInvoice } from "../types/raw-invoice.types.js"
 
