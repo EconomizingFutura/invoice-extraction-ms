@@ -1,0 +1,31 @@
+{
+  "name": "invoice-extraction-backend",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/multer": "^2.0.0",
+    "@types/node": "^25.0.2",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.21.0",
+    "typescript": "~5.9.3",
+    "vite": "^7.2.4"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "form-data": "^4.0.5",
+    "multer": "^2.0.2",
+    "node-fetch": "^3.3.2",
+    "openai": "^6.13.0",
+    "pdf-poppler": "^0.2.3",
+    "pdfjs-dist": "^5.4.449"
+  }
+}
