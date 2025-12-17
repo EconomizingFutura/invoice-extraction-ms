@@ -1,20 +1,24 @@
+import dotenv from "dotenv"
 dotenv.config()
 
 import express from "express"
 import cors from "cors"
-import dotenv from "dotenv"
 
 import invoiceRoutes from "./routes/invoice.routes"
-
 
 const app = express()
 
 app.use(cors())
 app.use(express.json())
 
+app.get("/health", (_req, res) => {
+  res.status(200).send("OK")
+})
+
 app.use("/api/invoice", invoiceRoutes)
 
-const PORT = process.env.PORT || 4000
-app.listen(PORT, () => {
-    console.log(`🚀 Server running on port ${PORT}`)
+const PORT = parseInt(process.env.PORT ?? "10000", 10)
+
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`🚀 Server running on port ${PORT}`)
 })
